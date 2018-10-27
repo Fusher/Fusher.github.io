@@ -4,24 +4,42 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   
-    <title>abcvps 新手小站</title>
+    <title>搬瓦工——SSH脚本方式安装Shadowsocks | abcvps 新手小站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Fusher">
     
 
     
-    <meta name="description" content="常用性价比高的VPS介绍。推送最新优惠活动码">
+    <meta name="description" content="获取SSH地址、端口和Root密码 点击My Services后我们来到下图界面 这里我们点击KiwiVM Control Panel后我们会跳转到下图界面，找到IP地址和SSH端口，我们还缺少SSH密码 搬瓦工为了用户的安全，要求用户在购买 VPS 后，要自己手动在 KiwiVM 控制面板重置密码，还是在控制面板，如下图。 面板右侧会显示你的 ssh 用户名（即 ip 地址）和 ssh 登陆端">
 <meta name="keywords" content="VPS、建站、个人使用">
-<meta property="og:type" content="website">
-<meta property="og:title" content="abcvps 新手小站">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搬瓦工——SSH脚本方式安装Shadowsocks">
+<meta property="og:url" content="http://yoursite.com/2018/10/27/搬瓦工——SSH脚本方式安装Shadowsocks/index.html">
 <meta property="og:site_name" content="abcvps 新手小站">
-<meta property="og:description" content="常用性价比高的VPS介绍。推送最新优惠活动码">
+<meta property="og:description" content="获取SSH地址、端口和Root密码 点击My Services后我们来到下图界面 这里我们点击KiwiVM Control Panel后我们会跳转到下图界面，找到IP地址和SSH端口，我们还缺少SSH密码 搬瓦工为了用户的安全，要求用户在购买 VPS 后，要自己手动在 KiwiVM 控制面板重置密码，还是在控制面板，如下图。 面板右侧会显示你的 ssh 用户名（即 ip 地址）和 ssh 登陆端">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-633ec59b1441d70b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-f14623751e1af2e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-a0f9f8f5c68680b7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-19d895e982386cf2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-c8c8eb92ee0a6d2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-bbbdecc0681236df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-f847c081cd301719.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-394c642370faa913.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-8100808a0f8b0822.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-1b704466684873a2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-f97ba8aa8e7c7bd3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-bba0da4896dfd9dc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-8404591429836b53.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-34d101038d9b2e71.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-0352a499de9d4f1f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-8c66d495f618aa63.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-10-27T14:45:02.128Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="abcvps 新手小站">
-<meta name="twitter:description" content="常用性价比高的VPS介绍。推送最新优惠活动码">
+<meta name="twitter:title" content="搬瓦工——SSH脚本方式安装Shadowsocks">
+<meta name="twitter:description" content="获取SSH地址、端口和Root密码 点击My Services后我们来到下图界面 这里我们点击KiwiVM Control Panel后我们会跳转到下图界面，找到IP地址和SSH端口，我们还缺少SSH密码 搬瓦工为了用户的安全，要求用户在购买 VPS 后，要自己手动在 KiwiVM 控制面板重置密码，还是在控制面板，如下图。 面板右侧会显示你的 ssh 用户名（即 ip 地址）和 ssh 登陆端">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1178839-633ec59b1441d70b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
     
     <link rel="alternative" href="/atom.xml" title="abcvps 新手小站" type="application/atom+xml">
@@ -71,12 +89,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope="" itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2018/10/27/搬瓦工——SSH脚本方式安装Shadowsocks/" title="搬瓦工——SSH脚本方式安装Shadowsocks" itemprop="url">搬瓦工——SSH脚本方式安装Shadowsocks</a>
@@ -90,9 +106,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <ol>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			
+		
+		</div>
+		
+		<ol>
 <li>获取SSH地址、端口和Root密码<br><img src="https://upload-images.jianshu.io/upload_images/1178839-633ec59b1441d70b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p1.png"></li>
 <li>点击My Services后我们来到下图界面<br><img src="https://upload-images.jianshu.io/upload_images/1178839-f14623751e1af2e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p2.png"></li>
 <li>这里我们点击KiwiVM Control Panel后我们会跳转到下图界面，找到IP地址和SSH端口，我们还缺少SSH密码<br><img src="https://upload-images.jianshu.io/upload_images/1178839-a0f9f8f5c68680b7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p3.jpg"></li>
@@ -119,14 +142,9 @@
 <p>Your QR Code: (For Shadowsocks Windows, OSX, Android and iOS clients)<br>ss://YWVzLTsadsa206YnVkZHkyMDA4QDEwNC4yMjQuMTM1Ldfghdfgk=<br>Your QR Code has been saved as a PNG file path:<br>/root/shadowsocks_python_qr.png</p>
 <p>Welcome to visit: <a href="https://teddysun.com/486.html" target="_blank" rel="noopener">https://teddysun.com/486.html</a><br>Enjoy it!</p>
 <p>记录保存好你的上述信息：Server IP、Server Port、Password、Encryption Method<br>这时你的专属ss已经搭好了，开始使用吧。</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 
@@ -134,114 +152,45 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://yoursite.com/2018/10/27/搬瓦工——SSH脚本方式安装Shadowsocks/" data-title="搬瓦工——SSH脚本方式安装Shadowsocks | abcvps 新手小站" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2018/10/27/搬瓦工新手指南/" title="搬瓦工新手指南" itemprop="url">搬瓦工新手指南</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Fusher" target="_blank" itemprop="author">Fusher</a>
-		
-  </p><p class="article-time">
-    <time datetime="2018-10-27T14:43:40.000Z" itemprop="datePublished"> Published 2018-10-27</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>#简介<br><a href="https://bwh1.net/aff.php?aff=35290" target="_blank" rel="noopener">搬瓦工</a>是一个低价VPS品牌，主打小微型vps主机和超低价年付方案。曾经在很长时间内推出过年付不足5美元的超低价VPS，而且还支持支付宝付款，可以说非常适合国内用户搭建科学上网工具VPN使用。目前已经没有这样的低价方案了，不过现在最低的年付19美元的VPS依然销售，已经算是在同类VPS中价格最低的了。<del>还可使用<code>BWH1ZBPVK</code>优惠码，在付款时再减6%</del>(该优惠码失效，使用<code>BWH26FXH3HIQ</code>优惠6.25%)。 目前<a href="https://bwh1.net/aff.php?aff=35290" target="_blank" rel="noopener">搬瓦工</a>提供KVM和OpenVZ两种架构.个人建议选择<code>KVM架构</code>，理由就是<code>KVM</code>相对稳定。如果个人使用科学上网的话直接购买<a href="https://bwh1.net/aff.php?aff=35290&amp;pid=43" target="_blank" rel="noopener">年19.99方案（KVM架构）</a>。直接年付优惠是最大的。</p>
-<p><a href="https://bwh1.net/aff.php?aff=35290&amp;pid=43" target="_blank" rel="noopener">年19.99方案（KVM架构）</a>的配置:</p>
-<ul>
-<li>内存：512MB</li>
-<li>硬盘：10GB SSD</li>
-<li>流量：500GB/月</li>
-<li>价格：年$19.99</li>
-</ul>
-<p>完全可以满足个人日常的使用（刷刷油桶、Facebook、twitter）。</p>
-<p>#购买步骤</p>
-<h2 id="核对方案配置以及选择时间期限和机房"><a href="#核对方案配置以及选择时间期限和机房" class="headerlink" title="核对方案配置以及选择时间期限和机房"></a>核对方案配置以及选择时间期限和机房</h2><p><img src="http://upload-images.jianshu.io/upload_images/1178839-3d8bfdf0eca044af.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p1"><br>我们然后会看到上图所示的界面，根据图示我们需要确定选择的方案以及时间，默认是洛杉矶机房，我们也可以选择其他的几个机房之一，点击”ADD TO CART”添加购物车。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1178839-44c56ea845241d08.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p2"></p>
-<blockquote>
-<p><del>可使用<code>BWH1ZBPVK</code>优惠码,再减6%.</del>(该优惠码失效，使用<code>BWH26FXH3HIQ</code>优惠6.25%)<br>核对我们选择方案的价格，没有问题后点击CHECKOUT结账。</p>
-</blockquote>
-<p>由于使用搬瓦工科学上网人数较多，部分ip被禁，搬瓦工官方取消了一部分服务器的一键安装ss功能，所以在这里记录下自行搭建ss功能方法。</p>
-<h2 id="登录或者新注册搬瓦工账户"><a href="#登录或者新注册搬瓦工账户" class="headerlink" title="登录或者新注册搬瓦工账户"></a>登录或者新注册搬瓦工账户</h2><p><img src="http://upload-images.jianshu.io/upload_images/1178839-dd79e983cc56cd15.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p3"></p>
-<p>根据上图，如果我们有过账户，可以直接点击”Click here to login”登录以及付款就可以，如果还没有账户则需要注册账户。个人信息不要真实的，但也不能太离谱和乱写字符出来，好歹也要稍微用点拼音。</p>
-<h2 id="进入支付选择页面"><a href="#进入支付选择页面" class="headerlink" title="进入支付选择页面"></a>进入支付选择页面</h2><p><img src="https://upload-images.jianshu.io/upload_images/1178839-7fbdb59539b9e1c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="20180125131736353.png"></p>
-<p>#搭建服务器<br>购买完vps之后，接着我们开始搬瓦工vps的搭建。</p>
-<ol>
-<li><p>选择My Services<br><img src="https://upload-images.jianshu.io/upload_images/1178839-83daa6f1e707f44d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="20180125132117678.png"></p>
-</li>
-<li><p>进入kimivm control panel<br><img src="https://upload-images.jianshu.io/upload_images/1178839-867b43a403ab0307.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="006Ub5Wezy7fPufGHNtc7amp690.jpg"></p>
-</li>
-<li><p>安装shaowscocks服务器(如果没有才选项的可以跳过到第4步).<br><img src="https://upload-images.jianshu.io/upload_images/1178839-b6f40095140676c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="20180125132702555.png"><br><img src="https://upload-images.jianshu.io/upload_images/1178839-5167fb04c29ba84d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="20180125132640095.png"></p>
-</li>
-</ol>
-<p>4.<a href="https://blog.csdn.net/yuwuchaio/article/details/81567324" target="_blank" rel="noopener">搬瓦工——SSH脚本方式安装Shadowsocks</a></p>
-<p>到这里服务器的已经搭建完成。接下来我们需要在客户端安装上网工具用来连接VPS服务器就可以科学上网了。</p>
-<p>#配置shadowsocks本地客户端<br>在配置服务器成功之后，搬瓦工有提示本地客户端的安装推荐，但需要翻墙才能安装。这边分别给出百度盘和原始下载地址:</p>
-<ol>
-<li><p>Android用户:<a href="https://pan.baidu.com/s/1gdtUdtVD4TkhfqZN5irr6Q" target="_blank" rel="noopener">Android 百度网盘</a> 提取密码：<code>vsrp</code>;<a href="https://github.com/shadowsocks/shadowsocks-android/releases" target="_blank" rel="noopener">原始链接</a>。</p>
-</li>
-<li><p>Windows 用户：<a href="https://pan.baidu.com/s/1iwmVQh_Lniisf7eqAIUxcA" target="_blank" rel="noopener">Windows 百度网盘</a> 提取密码：<code>nbr4</code>;<a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="noopener">原始链接</a>。</p>
-</li>
-<li><p>Mac 用户：<a href="https://pan.baidu.com/s/1Vl7RE0I_-JZfg32DgsLCJg" target="_blank" rel="noopener">Mac 百度网盘</a> 提取密码: <code>xjt2</code>;<a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases" target="_blank" rel="noopener">原始链接</a>。</p>
-</li>
-</ol>
-<p>打开各本地客户端配置方式大致相同。以Mac为例</p>
-<p>##Mac<br>安装完成之后即可看到小飞机ss在右上角运行，然后再点击“服务器设置”，在打开的窗口左下角点击“+”号，之后再填写ss(Shadowsocks Server)服务器信息（在搭建完成服务器时生成的信息填入）打开Shadowsocks即可科学上网了！参考如下图：<br><img src="https://upload-images.jianshu.io/upload_images/1178839-2b615136f96ba894.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="201710310021.jpg"></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2018/10/27/搬瓦工新手指南/" title="搬瓦工新手指南">
+ <strong>下一篇：</strong><br> 
+ <span>搬瓦工新手指南
+</span>
+</a>
 </div>
 
-</footer>
+</nav>
 
-
-    </article>
-
-
+	
 
 
 
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ 
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
@@ -346,12 +295,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -414,4 +440,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
