@@ -4,20 +4,20 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   
-    <title>搬瓦工——SSH脚本方式安装Shadowsocks | abcvps 新手小站</title>
+    <title>搬瓦工——SSH脚本方式安装Shadowsocks | ABC VPS新手教程</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
-    <meta name="author" content="Fusher">
+    <meta name="author" content="ABCVPS">
     
 
     
-    <meta name="description" content="获取SSH地址、端口和Root密码 点击My Services后我们来到下图界面 这里我们点击KiwiVM Control Panel后我们会跳转到下图界面，找到IP地址和SSH端口，我们还缺少SSH密码 搬瓦工为了用户的安全，要求用户在购买 VPS 后，要自己手动在 KiwiVM 控制面板重置密码，还是在控制面板，如下图。 面板右侧会显示你的 ssh 用户名（即 ip 地址）和 ssh 登陆端">
-<meta name="keywords" content="VPS、建站、个人使用">
+    <meta name="description" content="获取SSH地址、端口和Root密码 点击My Services后我们来到下图界面 这里我们点击KiwiVM Control Panel后我们会跳转到下图界面，找到IP地址和SSH端口，我们还缺少SSH密码 搬瓦工为了用户的安全，要求用户在购买 VPS 后，要自己手动在 KiwiVM 控制面板重置密码，还是在控制面板，如下图。">
+<meta name="keywords" content="搬瓦工、bandwagon Host">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搬瓦工——SSH脚本方式安装Shadowsocks">
 <meta property="og:url" content="http://yoursite.com/2018/10/27/搬瓦工——SSH脚本方式安装Shadowsocks/index.html">
-<meta property="og:site_name" content="abcvps 新手小站">
-<meta property="og:description" content="获取SSH地址、端口和Root密码 点击My Services后我们来到下图界面 这里我们点击KiwiVM Control Panel后我们会跳转到下图界面，找到IP地址和SSH端口，我们还缺少SSH密码 搬瓦工为了用户的安全，要求用户在购买 VPS 后，要自己手动在 KiwiVM 控制面板重置密码，还是在控制面板，如下图。 面板右侧会显示你的 ssh 用户名（即 ip 地址）和 ssh 登陆端">
+<meta property="og:site_name" content="ABC VPS新手教程">
+<meta property="og:description" content="获取SSH地址、端口和Root密码 点击My Services后我们来到下图界面 这里我们点击KiwiVM Control Panel后我们会跳转到下图界面，找到IP地址和SSH端口，我们还缺少SSH密码 搬瓦工为了用户的安全，要求用户在购买 VPS 后，要自己手动在 KiwiVM 控制面板重置密码，还是在控制面板，如下图。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-633ec59b1441d70b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-f14623751e1af2e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -35,14 +35,14 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-34d101038d9b2e71.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-0352a499de9d4f1f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-8c66d495f618aa63.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-10-27T14:45:02.128Z">
+<meta property="og:updated_time" content="2018-10-28T07:49:05.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搬瓦工——SSH脚本方式安装Shadowsocks">
-<meta name="twitter:description" content="获取SSH地址、端口和Root密码 点击My Services后我们来到下图界面 这里我们点击KiwiVM Control Panel后我们会跳转到下图界面，找到IP地址和SSH端口，我们还缺少SSH密码 搬瓦工为了用户的安全，要求用户在购买 VPS 后，要自己手动在 KiwiVM 控制面板重置密码，还是在控制面板，如下图。 面板右侧会显示你的 ssh 用户名（即 ip 地址）和 ssh 登陆端">
+<meta name="twitter:description" content="获取SSH地址、端口和Root密码 点击My Services后我们来到下图界面 这里我们点击KiwiVM Control Panel后我们会跳转到下图界面，找到IP地址和SSH端口，我们还缺少SSH密码 搬瓦工为了用户的安全，要求用户在购买 VPS 后，要自己手动在 KiwiVM 控制面板重置密码，还是在控制面板，如下图。">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1178839-633ec59b1441d70b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
     
-    <link rel="alternative" href="/atom.xml" title="abcvps 新手小站" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="ABC VPS新手教程" type="application/atom+xml">
     
     
     <link rel="icon" href="/img/favicon.ico">
@@ -60,8 +60,8 @@
 <div>
 		
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="abcvps 新手小站">abcvps 新手小站</a></h1>
-				<h2 class="blog-motto">VPS基础介绍、推荐</h2>
+				<h1 class="site-name"><a href="/" title="ABC VPS新手教程">ABC VPS新手教程</a></h1>
+				<h2 class="blog-motto">常用性价比高的VPS介绍和基础教程、推送最新优惠活动码</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
@@ -99,7 +99,7 @@
   </h1>
   <p class="article-author">By
        
-		<a href="/about" title="Fusher" target="_blank" itemprop="author">Fusher</a>
+		<a href="/about" title="ABCVPS" target="_blank" itemprop="author">ABCVPS</a>
 		
   </p><p class="article-time">
     <time datetime="2018-10-27T14:44:43.000Z" itemprop="datePublished"> Published 2018-10-27</time>
@@ -119,7 +119,7 @@
 <li>获取SSH地址、端口和Root密码<br><img src="https://upload-images.jianshu.io/upload_images/1178839-633ec59b1441d70b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p1.png"></li>
 <li>点击My Services后我们来到下图界面<br><img src="https://upload-images.jianshu.io/upload_images/1178839-f14623751e1af2e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p2.png"></li>
 <li>这里我们点击KiwiVM Control Panel后我们会跳转到下图界面，找到IP地址和SSH端口，我们还缺少SSH密码<br><img src="https://upload-images.jianshu.io/upload_images/1178839-a0f9f8f5c68680b7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p3.jpg"></li>
-<li>搬瓦工为了用户的安全，要求用户在购买 VPS 后，要自己手动在 KiwiVM 控制面板重置密码，还是在控制面板，如下图。<br><img src="https://upload-images.jianshu.io/upload_images/1178839-19d895e982386cf2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p4.png"></li>
+<li>搬瓦工为了用户的安全，要求用户在购买 VPS 后，要自己手动在 KiwiVM 控制面板重置密码，还是在控制面板，如下图。<br><img src="https://upload-images.jianshu.io/upload_images/1178839-19d895e982386cf2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p4.png"><a id="more"></a></li>
 <li>面板右侧会显示你的 ssh 用户名（即 ip 地址）和 ssh 登陆端口，在重置密码前，你需要先停止 vps，在控制面板右侧点击 “stop” 键停止 vps：<br><img src="https://upload-images.jianshu.io/upload_images/1178839-c8c8eb92ee0a6d2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p5.png"></li>
 <li>然后左侧下方的 “Root password modification” 选项为重置密码，你点击该项，进入如下页面：<br><img src="https://upload-images.jianshu.io/upload_images/1178839-bbbdecc0681236df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p6.png"></li>
 <li>然后点击 “Generate and set new root password” 按钮重置密码即可：<br><img src="https://upload-images.jianshu.io/upload_images/1178839-f847c081cd301719.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p7.png"></li>
@@ -148,13 +148,18 @@
 <div class="article-catetags">
 
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/搬瓦工、bandwagon-Host/">搬瓦工、bandwagon Host</a>
+  </div>
+
 </div>
 
 
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2018/10/27/搬瓦工——SSH脚本方式安装Shadowsocks/" data-title="搬瓦工——SSH脚本方式安装Shadowsocks | abcvps 新手小站" data-tsina="" class="share clearfix">
+	  <div data-url="http://yoursite.com/2018/10/27/搬瓦工——SSH脚本方式安装Shadowsocks/" data-title="搬瓦工——SSH脚本方式安装Shadowsocks | ABC VPS新手教程" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -167,14 +172,14 @@
 	
 <nav class="article-nav clearfix">
  
-
-<div class="next">
-<a href="/2018/10/27/搬瓦工新手指南/" title="搬瓦工新手指南">
- <strong>下一篇：</strong><br> 
- <span>搬瓦工新手指南
-</span>
+ <div class="prev">
+ <a href="/2018/10/28/搬瓦工新手指南/" title="搬瓦工新手指南">
+  <strong>上一篇：</strong><br>
+  <span>
+  搬瓦工新手指南</span>
 </a>
 </div>
+
 
 </nav>
 
@@ -199,6 +204,17 @@
   
 
   
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/搬瓦工、bandwagon-Host/" title="搬瓦工、bandwagon Host">搬瓦工、bandwagon Host<sup>2</sup></a></li>
+			
+		
+		</ul>
+</div>
+
 
   <div class="linkslist">
   <p class="asidetitle">Links</p>
@@ -245,7 +261,7 @@
 		<p class="copyright">
 		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2018 
 		
-		<a href="/about" target="_blank" title="Fusher">Fusher</a>
+		<a href="/about" target="_blank" title="ABCVPS">ABCVPS</a>
 		
 		
 		</p>
