@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-34d101038d9b2e71.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-0352a499de9d4f1f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-8c66d495f618aa63.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-11-02T12:07:33.524Z">
+<meta property="og:updated_time" content="2018-11-04T15:06:17.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搬瓦工——SSH脚本方式安装Shadowsocks">
 <meta name="twitter:description" content="获取SSH地址、端口和Root密码">
@@ -116,29 +116,29 @@
 		</div>
 		
 		<ol>
-<li>获取SSH地址、端口和Root密码<br><img src="https://upload-images.jianshu.io/upload_images/1178839-633ec59b1441d70b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p1.png"><a id="more"></a></li>
-<li>点击My Services后我们来到下图界面<br><img src="https://upload-images.jianshu.io/upload_images/1178839-f14623751e1af2e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p2.png"></li>
-<li>这里我们点击KiwiVM Control Panel后我们会跳转到下图界面，找到IP地址和SSH端口，我们还缺少SSH密码<br><img src="https://upload-images.jianshu.io/upload_images/1178839-a0f9f8f5c68680b7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p3.jpg"></li>
-<li><p>搬瓦工为了用户的安全，要求用户在购买 VPS 后，要自己手动在 KiwiVM 控制面板重置密码，还是在控制面板，如下图。<br><img src="https://upload-images.jianshu.io/upload_images/1178839-19d895e982386cf2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p4.png"></p>
+<li>获取SSH地址、端口和Root密码<br><img src="https://upload-images.jianshu.io/upload_images/1178839-633ec59b1441d70b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><a id="more"></a></li>
+<li>点击My Services后我们来到下图界面<br><img src="https://upload-images.jianshu.io/upload_images/1178839-f14623751e1af2e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>这里我们点击KiwiVM Control Panel后我们会跳转到下图界面，找到IP地址和SSH端口，我们还缺少SSH密码<br><img src="https://upload-images.jianshu.io/upload_images/1178839-a0f9f8f5c68680b7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><p>搬瓦工为了用户的安全，要求用户在购买 VPS 后，要自己手动在 KiwiVM 控制面板重置密码，还是在控制面板，如下图。<br><img src="https://upload-images.jianshu.io/upload_images/1178839-19d895e982386cf2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 </li>
-<li><p>面板右侧会显示你的 ssh 用户名（即 ip 地址）和 ssh 登陆端口，在重置密码前，你需要先停止 vps，在控制面板右侧点击 “stop” 键停止 vps：<br><img src="https://upload-images.jianshu.io/upload_images/1178839-c8c8eb92ee0a6d2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p5.png"></p>
+<li><p>面板右侧会显示你的 ssh 用户名（即 ip 地址）和 ssh 登陆端口，在重置密码前，你需要先停止 vps，在控制面板右侧点击 “stop” 键停止 vps：<br><img src="https://upload-images.jianshu.io/upload_images/1178839-c8c8eb92ee0a6d2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 </li>
-<li>然后左侧下方的 “Root password modification” 选项为重置密码，你点击该项，进入如下页面：<br><img src="https://upload-images.jianshu.io/upload_images/1178839-bbbdecc0681236df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p6.png"></li>
-<li>然后点击 “Generate and set new root password” 按钮重置密码即可：<br><img src="https://upload-images.jianshu.io/upload_images/1178839-f847c081cd301719.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p7.png"></li>
-<li>重置密码成功后，要记得重新启动 VPS 。这样子才可以使用 xshell 或 putty 等工具进行连接。下载<a href="http://pan.baidu.com/s/1jI0T5Fw" target="_blank" rel="noopener">putty for windows</a>开始连接:<br><img src="https://upload-images.jianshu.io/upload_images/1178839-394c642370faa913.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p8.jpg"></li>
-<li>填入刚才查到的主机地址和端口号，前面图中有介绍，点击打开:<br><img src="https://upload-images.jianshu.io/upload_images/1178839-8100808a0f8b0822.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p9.jpg"><br>如果这里有对话框弹出，选择是，然后在全黑的屏幕上输入 root ，回车。等五秒，按提示输入root的密码，密码就是前面刚刚重置的root密码。<br>copy你的密码，粘贴至putty（粘贴方式为单击鼠标右键，只需要右键单击一次，这里不会显示任何内容，其实是已经输入了），回车。</li>
+<li>然后左侧下方的 “Root password modification” 选项为重置密码，你点击该项，进入如下页面：<br><img src="https://upload-images.jianshu.io/upload_images/1178839-bbbdecc0681236df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>然后点击 “Generate and set new root password” 按钮重置密码即可：<br><img src="https://upload-images.jianshu.io/upload_images/1178839-f847c081cd301719.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>重置密码成功后，要记得重新启动 VPS 。这样子才可以使用 xshell 或 putty 等工具进行连接。下载<a href="http://pan.baidu.com/s/1jI0T5Fw" target="_blank" rel="noopener">putty for windows</a>开始连接:<br><img src="https://upload-images.jianshu.io/upload_images/1178839-394c642370faa913.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>填入刚才查到的主机地址和端口号，前面图中有介绍，点击打开:<br><img src="https://upload-images.jianshu.io/upload_images/1178839-8100808a0f8b0822.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>如果这里有对话框弹出，选择是，然后在全黑的屏幕上输入 root ，回车。等五秒，按提示输入root的密码，密码就是前面刚刚重置的root密码。<br>copy你的密码，粘贴至putty（粘贴方式为单击鼠标右键，只需要右键单击一次，这里不会显示任何内容，其实是已经输入了），回车。</li>
 <li>等到出现root@host~字样，复制下面脚本第1条命令，回车：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">脚本命令1</span><br><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>（备注：国外服务器运行脚本时容易出错，如出现错误提示 bash: wget: command not found，可以请在先执行 yum -y install wget 命令。成功后，再执行上面的命令。如果没有出现提示错误，请略过）<br><img src="https://upload-images.jianshu.io/upload_images/1178839-1b704466684873a2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p10.jpg"></p>
+<p>（备注：国外服务器运行脚本时容易出错，如出现错误提示 bash: wget: command not found，可以请在先执行 yum -y install wget 命令。成功后，再执行上面的命令。如果没有出现提示错误，请略过）<br><img src="https://upload-images.jianshu.io/upload_images/1178839-1b704466684873a2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <p>等出现了上图显示后，输入第2条脚本命令，回车：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">脚本命令2</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br></pre></td></tr></table></figure></p>
 <p><img src="https://upload-images.jianshu.io/upload_images/1178839-f97ba8aa8e7c7bd3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p11.jpg"></p>
 <p>等出现了上图显示后，输入第3条脚本命令，回车：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">脚本命令3</span><br><span class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/1178839-bba0da4896dfd9dc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p11.jpg"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1178839-bba0da4896dfd9dc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <p>出现以上画面，根据需要选择，不懂的话直接选1，或者默认回车.</p>
-<p>下面会提示你输入你的SS SERVER的密码，和端口。不输入就是默认。跑完命令后会出来你的SS客户端的信息。<br><img src="https://upload-images.jianshu.io/upload_images/1178839-8404591429836b53.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p12.jpg"><br><img src="https://upload-images.jianshu.io/upload_images/1178839-34d101038d9b2e71.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p13.jpg"></p>
-<p>输入后，回车！<br><img src="https://upload-images.jianshu.io/upload_images/1178839-0352a499de9d4f1f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p14.jpg"><br>我们选择aes-256-cfb，即7 ，回车。<br>这一步按回车继续,然后需要几分钟的安装过程，请耐心等待出现下面的画面！</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/1178839-8c66d495f618aa63.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p15.jpg"></p>
+<p>下面会提示你输入你的SS SERVER的密码，和端口。不输入就是默认。跑完命令后会出来你的SS客户端的信息。<br><img src="https://upload-images.jianshu.io/upload_images/1178839-8404591429836b53.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="https://upload-images.jianshu.io/upload_images/1178839-34d101038d9b2e71.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>输入后，回车！<br><img src="https://upload-images.jianshu.io/upload_images/1178839-0352a499de9d4f1f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>我们选择aes-256-cfb，即7 ，回车。<br>这一步按回车继续,然后需要几分钟的安装过程，请耐心等待出现下面的画面！</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1178839-8c66d495f618aa63.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <p><strong>请立即copy下来加以保存。</strong></p>
 <p>上面的命令全部回车执行后，如果没有报错，即为执行成功，出现确认提示的时候，输入 y 后，回车即可。<br>安装完成后，脚本提示如下：<br>Congratulations, Shadowsocks-Python server install completed!<br>Your Server IP : IP地址<br>Your Server Port : 端口<br>Your Password : 密码<br>Your Encryption Method: aes-256-gcm</p>
 <p>Your QR Code: (For Shadowsocks Windows, OSX, Android and iOS clients)<br>ss://YWVzLTsadsa206YnVkZHkyMDA4QDEwNC4yMjQuMTM1Ldfghdfgk=<br>Your QR Code has been saved as a PNG file path:<br>/root/shadowsocks_python_qr.png</p>
@@ -175,10 +175,10 @@
 <nav class="article-nav clearfix">
  
  <div class="prev">
- <a href="/archives/1f60720a.html" title="搬瓦工新手指南">
+ <a href="/archives/1f60720a.html" title="搬瓦工新手购买全方位指南">
   <strong>上一篇：</strong><br>
   <span>
-  搬瓦工新手指南</span>
+  搬瓦工新手购买全方位指南</span>
 </a>
 </div>
 
@@ -211,11 +211,19 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/搬瓦工、bandwagon-Host/" title="搬瓦工、bandwagon Host">搬瓦工、bandwagon Host<sup>2</sup></a></li>
+				<li><a href="/tags/搬瓦工/" title="搬瓦工">搬瓦工<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/VPS/" title="VPS">VPS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vultr/" title="Vultr">Vultr<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/搬瓦工、bandwagon-Host/" title="搬瓦工、bandwagon Host">搬瓦工、bandwagon Host<sup>1</sup></a></li>
 			
 		
 		</ul>
