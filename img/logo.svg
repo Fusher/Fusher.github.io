@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="65px" height="65px" viewBox="0 0 65 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="32.5" cy="32.5" r="32.5"></circle>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <g id="icon">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill-opacity="0.800000012" fill="#2EB7DE" xlink:href="#path-1"></use>
+                <text id="V" mask="url(#mask-2)" font-family="AbadiMT-CondensedExtraBold, Abadi MT Condensed Extra Bold" font-size="52" font-style="condensed" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="19.5" y="51.5">V</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
