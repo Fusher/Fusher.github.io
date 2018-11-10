@@ -333,7 +333,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/archives/662ab30f.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="archives/662ab30f.html" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/archives/662ab30f.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -492,7 +492,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/archives/1f60720a.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="archives/1f60720a.html" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/archives/1f60720a.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -652,7 +652,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/archives/e77571b9.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="archives/e77571b9.html" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/archives/e77571b9.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -811,7 +811,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/archives/4b19d98c.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="archives/4b19d98c.html" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/archives/4b19d98c.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -970,7 +970,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/archives/858ba5d8.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="archives/858ba5d8.html" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/archives/858ba5d8.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1130,7 +1130,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/archives/4bba8400.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="archives/4bba8400.html" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/archives/4bba8400.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1267,7 +1267,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/archives/23115375.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="archives/23115375.html" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/archives/23115375.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1564,14 +1564,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://abcvps.disqus.com/count.js" async></script>
-    
-
-    
-
-  
-
 
 
 
@@ -1587,12 +1579,38 @@
 
 
 
+  
 
 
 
 
 
 
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'zvqRrWYVwpWRE5vcsqGCIK2E-gzGzoHsz',
+        appKey: 'lUs5Ad4MEqboA6YhNTNrK17C',
+        placeholder: '造作',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
