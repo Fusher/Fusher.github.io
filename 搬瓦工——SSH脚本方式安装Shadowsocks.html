@@ -79,18 +79,35 @@
 
 
 
-<meta name="description" content="简介目前搬瓦工提供KVM和OpenVZ两种架构.个人建议选择KVM架构，理由就是KVM相对稳定。搬瓦工最新优惠码：使用BWH26FXH3HIQ优惠6.25%。">
+<meta name="description" content="获取SSH地址、端口和Root密码">
 <meta name="keywords" content="VPS、建站、个人使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搬瓦在售方案产品介绍">
-<meta property="og:url" content="https://www.abcvps.cn/archives/4bba8400.html">
+<meta property="og:title" content="搬瓦工——SSH脚本方式安装Shadowsocks">
+<meta property="og:url" content="https://www.abcvps.cn/搬瓦工——SSH脚本方式安装Shadowsocks.html">
 <meta property="og:site_name" content="abcvps新手教程">
-<meta property="og:description" content="简介目前搬瓦工提供KVM和OpenVZ两种架构.个人建议选择KVM架构，理由就是KVM相对稳定。搬瓦工最新优惠码：使用BWH26FXH3HIQ优惠6.25%。">
+<meta property="og:description" content="获取SSH地址、端口和Root密码">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-10T12:34:07.619Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-633ec59b1441d70b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-f14623751e1af2e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-a0f9f8f5c68680b7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-19d895e982386cf2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-c8c8eb92ee0a6d2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-bbbdecc0681236df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-f847c081cd301719.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-394c642370faa913.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-8100808a0f8b0822.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-1b704466684873a2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-f97ba8aa8e7c7bd3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-bba0da4896dfd9dc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-8404591429836b53.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-34d101038d9b2e71.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-0352a499de9d4f1f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1178839-8c66d495f618aa63.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-11-09T06:39:02.666Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搬瓦在售方案产品介绍">
-<meta name="twitter:description" content="简介目前搬瓦工提供KVM和OpenVZ两种架构.个人建议选择KVM架构，理由就是KVM相对稳定。搬瓦工最新优惠码：使用BWH26FXH3HIQ优惠6.25%。">
+<meta name="twitter:title" content="搬瓦工——SSH脚本方式安装Shadowsocks">
+<meta name="twitter:description" content="获取SSH地址、端口和Root密码">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1178839-633ec59b1441d70b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -120,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="https://www.abcvps.cn/archives/4bba8400.html">
+  <link rel="canonical" href="https://www.abcvps.cn/搬瓦工——SSH脚本方式安装Shadowsocks.html">
 
 
 
 
 
-  <title>搬瓦在售方案产品介绍 | abcvps新手教程</title>
+  <title>搬瓦工——SSH脚本方式安装Shadowsocks | abcvps新手教程</title>
   
 
 
@@ -263,7 +280,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.abcvps.cn/archives/4bba8400.html">
+    <link itemprop="mainEntityOfPage" href="https://www.abcvps.cn/搬瓦工——SSH脚本方式安装Shadowsocks.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="abcvps">
@@ -280,7 +297,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">搬瓦在售方案产品介绍</h1>
+          <h1 class="post-title" itemprop="name headline">搬瓦工——SSH脚本方式安装Shadowsocks</h1>
         
 
         <div class="post-meta">
@@ -292,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-03T22:55:14+08:00">
-                2018-11-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-27T22:44:43+08:00">
+                2018-10-27
               </time>
             
 
@@ -333,8 +350,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/archives/4bba8400.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/archives/4bba8400.html" itemprop="commentCount"></span>
+                <a href="/搬瓦工——SSH脚本方式安装Shadowsocks.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/搬瓦工——SSH脚本方式安装Shadowsocks.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -362,277 +379,34 @@
       
 
       
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>目前<a href="https://bwh8.net/aff.php?aff=35290" target="_blank" rel="noopener">搬瓦工</a>提供KVM和OpenVZ两种架构.个人建议选择<code>KVM架构</code>，理由就是<code>KVM</code>相对稳定。<a href="https://bwh8.net/aff.php?aff=35290" target="_blank" rel="noopener">搬瓦工</a>最新优惠码：<strong>使用<code>BWH26FXH3HIQ</code>优惠6.25%</strong>。<br><a id="more"></a><br><strong>购买教程可以参考:<a href="https://www.abcvps.cn/archives/1f60720a.html">搬瓦工新手注册购买全方位指南</a>。</strong></p>
-<p>如果个人建站练手或使用科学上网的话直接购买<a href="https://bwh8.net/aff.php?aff=35290&amp;pid=43" target="_blank" rel="noopener">年19.99方案（KVM架构）</a>。直接年付优惠是最大的,完全可以满足个人日常的使用（刷刷YouTube、Facebook、twitter之类）。</p>
-<p><code>ps: 购买后如果以后需要升级/降级方案，都可以在后台操作。</code></p>
-<p>目前<a href="https://bwh8.net/aff.php?aff=35290&amp;gid=1" target="_blank" rel="noopener">搬瓦工产品全部在售方案 直达</a>,以下列举部分:</p>
-<h2 id="年付方案："><a href="#年付方案：" class="headerlink" title="年付方案："></a>年付方案：</h2><p><a href="https://bwh8.net/aff.php?aff=35290&amp;pid=43" target="_blank" rel="noopener">年付19.99方案（KVM架构）点击直达购买链接</a>：</p>
-<table>
-<thead>
-<tr>
-<th>内存</th>
-<th>硬盘</th>
-<th>流量</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>512MB</td>
-<td>10GB SSD</td>
-<td>500GB/月</td>
-<td><strong>年$19.99</strong></td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://bwh8.net/aff.php?aff=35290&amp;pid=12" target="_blank" rel="noopener">年付19.99方案（7机房OpenVZ）点击直达购买链接</a></p>
-<table>
-<thead>
-<tr>
-<th>内存</th>
-<th>硬盘</th>
-<th>流量</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>512MB</td>
-<td>10GB SSD</td>
-<td>500GB/月</td>
-<td><strong>$19.99/年</strong></td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://bwh8.net/aff.php?aff=35290&amp;pid=56" target="_blank" rel="noopener">年29.99方案（CN2 GT）点击直达购买链接</a>:</p>
-<table>
-<thead>
-<tr>
-<th>内存</th>
-<th>硬盘</th>
-<th>流量</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>512MB</td>
-<td>10GB SSD</td>
-<td>500GB/月</td>
-<td><strong>年$29.99</strong></td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://bwh8.net/aff.php?aff=35290&amp;pid=71" target="_blank" rel="noopener">年39.99方案（CN2 GIA）点击直达购买链接</a></p>
-<table>
-<thead>
-<tr>
-<th>内存</th>
-<th>硬盘</th>
-<th>流量</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>512MB</td>
-<td>10GB SSD</td>
-<td>300GB/月</td>
-<td><strong>$39.99/年</strong></td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://bwh8.net/aff.php?aff=35290&amp;pid=44" target="_blank" rel="noopener">年49.99方案（KVM架构）点击直达购买链接</a>：</p>
-<table>
-<thead>
-<tr>
-<th>内存</th>
-<th>硬盘</th>
-<th>流量</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1024MB</td>
-<td>20GB SSD</td>
-<td>1000GB/月</td>
-<td><strong>$25.99/半年（$49/年)</strong></td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://bwh8.net/aff.php?aff=35290&amp;pid=13" target="_blank" rel="noopener">年49.99方案（7机房OpenVZ）点击直达购买链接</a></p>
-<table>
-<thead>
-<tr>
-<th>内存</th>
-<th>硬盘</th>
-<th>流量</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1024MB</td>
-<td>20GB SSD</td>
-<td>1000GB/月</td>
-<td><strong>$25.99/半年（$49/年）</strong></td>
-</tr>
-</tbody>
-</table>
-<h2 id="半年付方案："><a href="#半年付方案：" class="headerlink" title="半年付方案："></a>半年付方案：</h2><p><a href="https://bwh8.net/aff.php?aff=35290&amp;pid=57" target="_blank" rel="noopener">半年29.99方案（CN2 GT）点击直达购买链接</a>：</p>
-<table>
-<thead>
-<tr>
-<th>内存</th>
-<th>硬盘</th>
-<th>流量</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1024MB</td>
-<td>20GB SSD</td>
-<td>1000GB/月</td>
-<td><strong>$29.99/半年（$49/年）</strong></td>
-</tr>
-</tbody>
-</table>
-<h2 id="季付方案："><a href="#季付方案：" class="headerlink" title="季付方案："></a>季付方案：</h2><p><a href="https://bwh8.net/aff.php?aff=35290&amp;pid=72" target="_blank" rel="noopener"> 季25.99方案（CN2 GIA）点击直达购买链接</a></p>
-<table>
-<thead>
-<tr>
-<th>内存</th>
-<th>硬盘</th>
-<th>流量</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1024MB</td>
-<td>20GB SSD</td>
-<td>1000GB/月</td>
-<td><strong>$25.99/季度</strong></td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://bwh8.net/aff.php?aff=35290&amp;pid=73" target="_blank" rel="noopener">季51.99方案（CN2 GIA）点击直达购买链接</a></p>
-<table>
-<thead>
-<tr>
-<th>内存</th>
-<th>硬盘</th>
-<th>流量</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2048MB</td>
-<td>40GB SSD</td>
-<td>2000GB/月</td>
-<td><strong>$51.99/季</strong></td>
-</tr>
-</tbody>
-</table>
-<h2 id="月付方案："><a href="#月付方案：" class="headerlink" title="月付方案："></a>月付方案：</h2><p><a href="https://bwh8.net/aff.php?aff=35290&amp;pid=58" target="_blank" rel="noopener">月9.99方案（洛杉矶CN2）点击直达购买链接</a></p>
-<table>
-<thead>
-<tr>
-<th>内存</th>
-<th>硬盘</th>
-<th>流量</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2048MB</td>
-<td>40GB SSD</td>
-<td>2000GB/月</td>
-<td><strong>$9.99/月</strong></td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://bwh8.net/aff.php?aff=35290&amp;pid=74" target="_blank" rel="noopener">月付32.99方案（CN2 GIA）点击直达购买链接</a></p>
-<table>
-<thead>
-<tr>
-<th>内存</th>
-<th>硬盘</th>
-<th>流量</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>4GB</td>
-<td>80GB SSD</td>
-<td>3000GB/月</td>
-<td><strong>$32.99/月</strong></td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://bwh8.net/aff.php?aff=35290&amp;pid=63" target="_blank" rel="noopener">月39.99方案（香港机房）点击直达购买链接</a></p>
-<table>
-<thead>
-<tr>
-<th>内存</th>
-<th>硬盘</th>
-<th>流量</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>4GB</td>
-<td>80GB SSD</td>
-<td>300GB/月</td>
-<td><strong>$39.99/月</strong></td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://bwh8.net/aff.php?aff=35290&amp;pid=64" target="_blank" rel="noopener">月79.99方案（香港机房）点击直达购买链接</a></p>
-<table>
-<thead>
-<tr>
-<th>内存</th>
-<th>硬盘</th>
-<th>流量</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>8GB</td>
-<td>160GB SSD</td>
-<td>500GB/月</td>
-<td><strong>$79.99/月</strong></td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://bwh8.net/aff.php?aff=35290&amp;pid=64" target="_blank" rel="noopener">月付79.99方案（香港）点击直达购买链接</a></p>
-<table>
-<thead>
-<tr>
-<th>内存</th>
-<th>硬盘</th>
-<th>流量</th>
-<th>价格</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>8GB</td>
-<td>160GB SSD</td>
-<td>500GB/月</td>
-<td><strong>$79.99/月</strong></td>
-</tr>
-</tbody>
-</table>
-<h1 id="速度对比参考"><a href="#速度对比参考" class="headerlink" title="速度对比参考"></a>速度对比参考</h1><p>机房套餐的速度比较：CN2 GIA特惠方案&gt;CN2特惠方案&gt;KVM方案&gt;OVZ方案，价格自然也是这个顺序。</p>
+        <ol>
+<li>获取SSH地址、端口和Root密码<br><img src="https://upload-images.jianshu.io/upload_images/1178839-633ec59b1441d70b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><a id="more"></a></li>
+<li>点击My Services后我们来到下图界面<br><img src="https://upload-images.jianshu.io/upload_images/1178839-f14623751e1af2e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>这里我们点击KiwiVM Control Panel后我们会跳转到下图界面，找到IP地址和SSH端口，我们还缺少SSH密码<br><img src="https://upload-images.jianshu.io/upload_images/1178839-a0f9f8f5c68680b7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li><p>搬瓦工为了用户的安全，要求用户在购买 VPS 后，要自己手动在 KiwiVM 控制面板重置密码，还是在控制面板，如下图。<br><img src="https://upload-images.jianshu.io/upload_images/1178839-19d895e982386cf2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</li>
+<li><p>面板右侧会显示你的 ssh 用户名（即 ip 地址）和 ssh 登陆端口，在重置密码前，你需要先停止 vps，在控制面板右侧点击 “stop” 键停止 vps：<br><img src="https://upload-images.jianshu.io/upload_images/1178839-c8c8eb92ee0a6d2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</li>
+<li>然后左侧下方的 “Root password modification” 选项为重置密码，你点击该项，进入如下页面：<br><img src="https://upload-images.jianshu.io/upload_images/1178839-bbbdecc0681236df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>然后点击 “Generate and set new root password” 按钮重置密码即可：<br><img src="https://upload-images.jianshu.io/upload_images/1178839-f847c081cd301719.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>重置密码成功后，要记得重新启动 VPS 。这样子才可以使用 xshell 或 putty 等工具进行连接。下载<a href="http://pan.baidu.com/s/1jI0T5Fw" target="_blank" rel="noopener">putty for windows</a>开始连接:<br><img src="https://upload-images.jianshu.io/upload_images/1178839-394c642370faa913.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>填入刚才查到的主机地址和端口号，前面图中有介绍，点击打开:<br><img src="https://upload-images.jianshu.io/upload_images/1178839-8100808a0f8b0822.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>如果这里有对话框弹出，选择是，然后在全黑的屏幕上输入 root ，回车。等五秒，按提示输入root的密码，密码就是前面刚刚重置的root密码。<br>copy你的密码，粘贴至putty（粘贴方式为单击鼠标右键，只需要右键单击一次，这里不会显示任何内容，其实是已经输入了），回车。</li>
+<li>等到出现root@host~字样，复制下面脚本第1条命令，回车：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">脚本命令1</span><br><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>（备注：国外服务器运行脚本时容易出错，如出现错误提示 bash: wget: command not found，可以请在先执行 yum -y install wget 命令。成功后，再执行上面的命令。如果没有出现提示错误，请略过）<br><img src="https://upload-images.jianshu.io/upload_images/1178839-1b704466684873a2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>等出现了上图显示后，输入第2条脚本命令，回车：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">脚本命令2</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1178839-f97ba8aa8e7c7bd3.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="p11.jpg"></p>
+<p>等出现了上图显示后，输入第3条脚本命令，回车：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">脚本命令3</span><br><span class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1178839-bba0da4896dfd9dc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>出现以上画面，根据需要选择，不懂的话直接选1，或者默认回车.</p>
+<p>下面会提示你输入你的SS SERVER的密码，和端口。不输入就是默认。跑完命令后会出来你的SS客户端的信息。<br><img src="https://upload-images.jianshu.io/upload_images/1178839-8404591429836b53.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="https://upload-images.jianshu.io/upload_images/1178839-34d101038d9b2e71.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>输入后，回车！<br><img src="https://upload-images.jianshu.io/upload_images/1178839-0352a499de9d4f1f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>我们选择aes-256-cfb，即7 ，回车。<br>这一步按回车继续,然后需要几分钟的安装过程，请耐心等待出现下面的画面！</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1178839-8c66d495f618aa63.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><strong>请立即copy下来加以保存。</strong></p>
+<p>上面的命令全部回车执行后，如果没有报错，即为执行成功，出现确认提示的时候，输入 y 后，回车即可。<br>安装完成后，脚本提示如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Congratulations, Shadowsocks-Python server install completed!</span><br><span class="line">Your Server IP : IP地址</span><br><span class="line">Your Server Port : 端口</span><br><span class="line">Your Password : 密码</span><br><span class="line">Your Encryption Method: aes-256-gcm</span><br><span class="line"></span><br><span class="line">Your QR Code: (For Shadowsocks Windows, OSX, Android and iOS clients)</span><br><span class="line">ss://YWVzLTsadsa206YnVkZHkyMDA4QDEwNC4yMjQuMTM1Ldfghdfgk=</span><br><span class="line">Your QR Code has been saved as a PNG file path:</span><br><span class="line">/root/shadowsocks_python_qr.png</span><br><span class="line"></span><br><span class="line">Welcome to visit: https://teddysun.com/486.html</span><br><span class="line">Enjoy it!</span><br></pre></td></tr></table></figure>
+<p>记录保存好你的上述信息：Server IP、Server Port、Password、Encryption Method<br>这时你的专属ss已经搭好了，开始使用吧。</p>
 
       
     </div>
@@ -666,18 +440,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/archives/23115375.html" rel="next" title="VPS的介绍及推荐">
-                <i class="fa fa-chevron-left"></i> VPS的介绍及推荐
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/archives/662ab30f.html" rel="prev" title="关于Vultr的ss搭建新手指导">
-                关于Vultr的ss搭建新手指导 <i class="fa fa-chevron-right"></i>
+              <a href="/搬瓦工新手指南.html" rel="prev" title="搬瓦工新手购买全方位指南">
+                搬瓦工新手购买全方位指南 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -733,17 +503,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -794,22 +555,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#年付方案："><span class="nav-number">2.</span> <span class="nav-text">年付方案：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#半年付方案："><span class="nav-number">3.</span> <span class="nav-text">半年付方案：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#季付方案："><span class="nav-number">4.</span> <span class="nav-text">季付方案：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#月付方案："><span class="nav-number">5.</span> <span class="nav-text">月付方案：</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#速度对比参考"><span class="nav-number"></span> <span class="nav-text">速度对比参考</span></a></li></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
