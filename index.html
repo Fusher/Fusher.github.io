@@ -2,6 +2,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
@@ -9,8 +18,11 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +50,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
 
 
 
@@ -50,43 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="keywords" content="VPS、建站、个人使用">
-<meta property="og:type" content="website">
-<meta property="og:title" content="abcvps新手教程">
-<meta property="og:url" content="https://www.abcvps.cn/index.html">
-<meta property="og:site_name" content="abcvps新手教程">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="abcvps新手教程">
 
 
 
@@ -95,15 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    version: '5.1.4',
+    version: '6.5.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -115,12 +103,34 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="keywords" content="VPS、建站、个人使用">
+<meta property="og:type" content="website">
+<meta property="og:title" content="abcvps新手教程">
+<meta property="og:url" content="https://www.abcvps.cn/index.html">
+<meta property="og:site_name" content="abcvps新手教程">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="abcvps新手教程">
+
+
+
+
+
 
   <link rel="canonical" href="https://www.abcvps.cn/">
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>abcvps新手教程</title>
   
@@ -131,6 +141,36 @@
 
 
 
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
@@ -157,13 +197,15 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">科学上网+VPS介绍和新手教程、推送最新优惠活动码</p>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -171,35 +213,55 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-home menu-item-active">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -207,12 +269,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -223,6 +293,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -249,25 +321,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/关于Vultr的ss搭建新手指导.html" itemprop="url">关于Vultr的ss搭建新手指导</a></h1>
+                
+                <a href="/关于Vultr的ss搭建新手指导.html" class="post-title-link" itemprop="https://www.abcvps.cn/index.html">关于Vultr的ss搭建新手指导</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T13:25:59+08:00">
-                2018-11-04
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-11-04 13:25:59" itemprop="dateCreated datePublished" datetime="2018-11-04T13:25:59+08:00">2018-11-04</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-11-12 11:29:28" itemprop="dateModified" datetime="2018-11-12T11:29:28+08:00">2018-11-12</time>
+              
             
           </span>
 
@@ -280,14 +378,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vultr/" itemprop="url" rel="index">
-                    <span itemprop="name">Vultr</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Vultr/" itemprop="url" rel="index"><span itemprop="name">Vultr</span></a></span>
 
                 
                 
@@ -324,21 +418,29 @@
         
           <p><img src="https://www.vultr.com/media/logo_onwhite.png" alt=""><br>在文章<a href="">VPS的介绍及推荐</a>中，有过推荐<a href="https://www.vultr.com/?ref=7601315" target="_blank" rel="noopener">Vultr</a>这个VPS服务商。本篇文章主要是针对新手，详细讲述如何从购买到搭建完成ss用以替代VPN科学上网。<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/关于Vultr的ss搭建新手指导.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/关于Vultr的ss搭建新手指导.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </p></div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -371,6 +473,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -395,25 +499,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/搬瓦工新手购买+搭建ss全方位指南.html" itemprop="url">搬瓦工新手购买+搭建ss全方位指南</a></h1>
+                
+                <a href="/搬瓦工新手购买+搭建ss全方位指南.html" class="post-title-link" itemprop="https://www.abcvps.cn/index.html">搬瓦工新手购买+搭建ss全方位指南</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T22:43:40+08:00">
-                2018-10-28
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-10-28 22:43:40" itemprop="dateCreated datePublished" datetime="2018-10-28T22:43:40+08:00">2018-10-28</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-11-14 15:45:08" itemprop="dateModified" datetime="2018-11-14T15:45:08+08:00">2018-11-14</time>
+              
             
           </span>
 
@@ -426,14 +556,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/bandwagon/" itemprop="url" rel="index">
-                    <span itemprop="name">bandwagon</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/bandwagon/" itemprop="url" rel="index"><span itemprop="name">bandwagon</span></a></span>
 
                 
                 
@@ -471,21 +597,29 @@
           <p><img src="https://upload-images.jianshu.io/upload_images/1178839-d36dc2a666fcf1b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><a href="https://bwh1.net/aff.php?aff=35290" target="_blank" rel="noopener">搬瓦工</a>是一个低价VPS品牌，主打小微型vps主机和超低价年付方案。曾经在很长时间内推出过年付不足5美元的超低价VPS，而且还支持支付宝付款，可以说非常适合国内用户搭建科学上网工具VPN使用。目前已经没有这样的低价方案了，不过现在最低的年付19美元的VPS依然销售，已经算是在同类VPS中价格最低的了。<del>还可使用<code>BWH1ZBPVK</code>优惠码，在付款时再减6%</del>(该优惠码失效，使用<code>BWH26FXH3HIQ</code>优惠6.25%)。 目前<a href="https://bwh1.net/aff.php?aff=35290" target="_blank" rel="noopener">搬瓦工</a>提供KVM和OpenVZ两种架构.个人建议选择<code>KVM架构</code>，理由就是<code>KVM</code>相对稳定。<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/搬瓦工新手购买+搭建ss全方位指南.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/搬瓦工新手购买+搭建ss全方位指南.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </p></div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -518,6 +652,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -542,25 +678,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Vultr优惠汇总.html" itemprop="url">Vultr优惠汇总</a></h1>
+                
+                <a href="/Vultr优惠汇总.html" class="post-title-link" itemprop="https://www.abcvps.cn/index.html">Vultr优惠汇总</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-10T21:09:12+08:00">
-                2018-11-10
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-11-10 21:09:12 / Modified: 22:54:12" itemprop="dateCreated datePublished" datetime="2018-11-10T21:09:12+08:00">2018-11-10</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -573,14 +723,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/discount/" itemprop="url" rel="index">
-                    <span itemprop="name">discount</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/discount/" itemprop="url" rel="index"><span itemprop="name">discount</span></a></span>
 
                 
                 
@@ -617,21 +763,29 @@
         
           <p>之前介绍过的 <strong><a href="https://www.vultr.com/register/?ref=7601315" target="_blank" rel="noopener">Vultr</a></strong> 能成为一个广受欢迎的VPS服务商，在于它的性价比高，同时它也会经常提供给新老用户优惠活动。本文总结所有当前最新可用Vultr的新老用户优惠活动。  以下活动最好使用  <strong>信用卡</strong> 或 <strong>PayPal</strong>。其它支付方式可能不支持。<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/Vultr优惠汇总.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Vultr优惠汇总.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </p></div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -664,6 +818,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -688,25 +844,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/搬瓦工优惠汇总.html" itemprop="url">搬瓦工优惠汇总</a></h1>
+                
+                <a href="/搬瓦工优惠汇总.html" class="post-title-link" itemprop="https://www.abcvps.cn/index.html">搬瓦工优惠汇总</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-09T22:28:50+08:00">
-                2018-11-09
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-11-09 22:28:50" itemprop="dateCreated datePublished" datetime="2018-11-09T22:28:50+08:00">2018-11-09</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-11-10 22:54:12" itemprop="dateModified" datetime="2018-11-10T22:54:12+08:00">2018-11-10</time>
+              
             
           </span>
 
@@ -719,14 +901,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/discount/" itemprop="url" rel="index">
-                    <span itemprop="name">discount</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/discount/" itemprop="url" rel="index"><span itemprop="name">discount</span></a></span>
 
                 
                 
@@ -763,21 +941,29 @@
         
           <p>随着搬瓦工老版的优惠码失效。这边整理了一波最新的可用优惠码。目前优惠最大的是:<code>BWH26FXH3HIQ</code>优惠力度 6.25%。<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/搬瓦工优惠汇总.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/搬瓦工优惠汇总.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </p></div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -810,6 +996,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -834,25 +1022,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/搬瓦工——SSH脚本方式安装Shadowsocks.html" itemprop="url">搬瓦工——SSH脚本方式安装Shadowsocks</a></h1>
+                
+                <a href="/搬瓦工——SSH脚本方式安装Shadowsocks.html" class="post-title-link" itemprop="https://www.abcvps.cn/index.html">搬瓦工——SSH脚本方式安装Shadowsocks</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-27T22:44:43+08:00">
-                2018-10-27
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-10-27 22:44:43" itemprop="dateCreated datePublished" datetime="2018-10-27T22:44:43+08:00">2018-10-27</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-11-10 22:54:12" itemprop="dateModified" datetime="2018-11-10T22:54:12+08:00">2018-11-10</time>
+              
             
           </span>
 
@@ -865,14 +1079,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/bandwagon/" itemprop="url" rel="index">
-                    <span itemprop="name">bandwagon</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/bandwagon/" itemprop="url" rel="index"><span itemprop="name">bandwagon</span></a></span>
 
                 
                 
@@ -910,21 +1120,29 @@
           <ol>
 <li>获取SSH地址、端口和Root密码<br><img src="https://upload-images.jianshu.io/upload_images/1178839-633ec59b1441d70b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="">
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/搬瓦工——SSH脚本方式安装Shadowsocks.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/搬瓦工——SSH脚本方式安装Shadowsocks.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </li></ol></div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -957,6 +1175,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -981,25 +1201,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/搬瓦工产品介绍.html" itemprop="url">搬瓦在售方案产品介绍</a></h1>
+                
+                <a href="/搬瓦工产品介绍.html" class="post-title-link" itemprop="https://www.abcvps.cn/index.html">搬瓦在售方案产品介绍</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-03T22:55:14+08:00">
-                2018-11-03
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-11-03 22:55:14" itemprop="dateCreated datePublished" datetime="2018-11-03T22:55:14+08:00">2018-11-03</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-11-10 22:54:12" itemprop="dateModified" datetime="2018-11-10T22:54:12+08:00">2018-11-10</time>
+              
             
           </span>
 
@@ -1012,14 +1258,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/bandwagon/" itemprop="url" rel="index">
-                    <span itemprop="name">bandwagon</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/bandwagon/" itemprop="url" rel="index"><span itemprop="name">bandwagon</span></a></span>
 
                 
                 
@@ -1056,21 +1298,29 @@
         
           <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>目前<a href="https://bwh8.net/aff.php?aff=35290" target="_blank" rel="noopener">搬瓦工</a>提供KVM和OpenVZ两种架构.个人建议选择<code>KVM架构</code>，理由就是<code>KVM</code>相对稳定。<a href="https://bwh8.net/aff.php?aff=35290" target="_blank" rel="noopener">搬瓦工</a>最新优惠码：<strong>使用<code>BWH26FXH3HIQ</code>优惠6.25%</strong>。<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/搬瓦工产品介绍.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/搬瓦工产品介绍.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </p></div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1103,6 +1353,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -1127,25 +1379,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/搬瓦工资费方案自助升级.html" itemprop="url">搬瓦工资费方案自助升级</a></h1>
+                
+                <a href="/搬瓦工资费方案自助升级.html" class="post-title-link" itemprop="https://www.abcvps.cn/index.html">搬瓦工资费方案自助升级</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-14T15:41:18+08:00">
-                2018-11-14
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-11-14 15:41:18 / Modified: 16:16:18" itemprop="dateCreated datePublished" datetime="2018-11-14T15:41:18+08:00">2018-11-14</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1158,14 +1424,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/bandwagon/" itemprop="url" rel="index">
-                    <span itemprop="name">bandwagon</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/bandwagon/" itemprop="url" rel="index"><span itemprop="name">bandwagon</span></a></span>
 
                 
                 
@@ -1221,21 +1483,29 @@
 </table>
 <p>&emsp;&emsp;此方案可以满足大部分个人的需求，但是偶尔有些超过方案套餐限制的话也就只能等到下个月开始重新计费。其实除了等待下个月的套餐。我们也可以对我们的套餐进行升级（<strong>当然也可以降级,操作步骤相同</strong>）。<br>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/搬瓦工资费方案自助升级.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/搬瓦工资费方案自助升级.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </p></div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1268,6 +1538,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -1292,25 +1564,51 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/VPS简介及推荐.html" itemprop="url">科学上网及VPS的介绍及推荐</a></h1>
+                
+                <a href="/VPS简介及推荐.html" class="post-title-link" itemprop="https://www.abcvps.cn/index.html">科学上网及VPS的介绍及推荐</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T22:44:43+08:00">
-                2018-10-28
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-10-28 22:44:43" itemprop="dateCreated datePublished" datetime="2018-10-28T22:44:43+08:00">2018-10-28</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-11-14 15:06:47" itemprop="dateModified" datetime="2018-11-14T15:06:47+08:00">2018-11-14</time>
+              
             
           </span>
 
@@ -1348,21 +1646,29 @@
 </blockquote>
 <p>&emsp;&emsp;VPS（虚拟专用服务器）是将一台服务器分割成多个虚拟专享服务器的服务。实现VPS的技术分为容器技术和虚拟机技术 。在容器或虚拟机中，每个VPS都可分配独立公网IP地址、独立操作系统、实现不同VPS间磁盘空间、内存、CPU资源、进程和系统配置的隔离，为用户和应用程序模拟出“独占”使用计算资源的体验。
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/VPS简介及推荐.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/VPS简介及推荐.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </p></div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1395,6 +1701,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -1419,25 +1727,39 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/搬瓦工常见问题FAQ.html" itemprop="url">搬瓦工常见问题FAQ</a></h1>
+                
+                <a href="/搬瓦工常见问题FAQ.html" class="post-title-link" itemprop="https://www.abcvps.cn/index.html">搬瓦工常见问题FAQ</a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-14T16:30:02+08:00">
-                2018-11-14
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-11-14 16:30:02 / Modified: 16:53:14" itemprop="dateCreated datePublished" datetime="2018-11-14T16:30:02+08:00">2018-11-14</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -1450,14 +1772,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/bandwagon/" itemprop="url" rel="index">
-                    <span itemprop="name">bandwagon</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/bandwagon/" itemprop="url" rel="index"><span itemprop="name">bandwagon</span></a></span>
 
                 
                 
@@ -1496,21 +1814,29 @@
 <li><p><strong>Q</strong>:搬瓦工会不会卷款跑路？</p>
 <p><strong>A</strong>:搬瓦工已经有很长一段时间了; 搬瓦工的母公司IT7 Networks自2004年开始运营.Bandwagonhost服务器由管理许多其他中高端虚拟主机环境的同一专家团队管理。</p>
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/搬瓦工常见问题FAQ.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/搬瓦工常见问题FAQ.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
           <!--/noindex-->
         
       
     </li></ul></div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1543,9 +1869,6 @@
           </div>
           
 
-
-          
-
         </div>
         
           
@@ -1574,44 +1897,54 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
+                <div class="site-state-item site-state-posts">
                 
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">分类</span>
+                  <a href="/archives/">
                 
-              </div>
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">categories</span>
+                  
+                </div>
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
             
-
-            
-
-          </nav>
-
           
-
-          
-
-          
-          
-
-          
-          
-
           
 
         </div>
@@ -1632,16 +1965,18 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">abcvps</span>
 
   
+
+  
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -1649,12 +1984,13 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.5.0</div>
 
 
 
 
         
+
 
 
 
@@ -1674,7 +2010,10 @@
     
 
     
+	
+    
 
+    
   </div>
 
   
@@ -1693,7 +2032,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -1713,16 +2056,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -1731,18 +2064,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
 
 
 
@@ -1754,21 +2082,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
 
 
 
@@ -1776,11 +2090,7 @@
 
 
 
-
-
   
-
-
 
 
 
@@ -1804,6 +2114,16 @@
   
 
   
+
+  
+
+  
+  
+
+  
+
+  
+
   
 
   
