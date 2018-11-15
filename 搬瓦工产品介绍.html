@@ -212,7 +212,7 @@
     </div>
     
       
-        <p class="site-subtitle">科学上网+VPS介绍和新手教程、推送最新优惠活动码</p>
+        <h1 class="site-subtitle" itemprop="description">科学上网+VPS介绍和新手教程、推送最新优惠活动码</h1>
       
     
   </div>
@@ -283,6 +283,23 @@
     <a href="/categories/Vultr/" rel="section"><i class="menu-item-icon fa fa-fw fa-vimeo-square"></i> <br>Vultr</a>
 
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-discount">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/discount" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>优惠中心</a>
+
+  </li>
 
       
       
@@ -349,10 +366,10 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">搬瓦在售方案产品介绍
+          <h2 class="post-title" itemprop="name headline">搬瓦在售方案产品介绍
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -417,6 +434,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/搬瓦工产品介绍.html#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/搬瓦工产品介绍.html" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -722,7 +749,15 @@
     
     
     
-
+    <div>
+     
+     <div>
+    
+        <div style="text-align:center;color: #000;font-size:16px;"> —— 完 —— </div>
+    
+</div>
+     
+    </div>
     
 
     
@@ -777,6 +812,9 @@
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -861,6 +899,28 @@
           
 
           
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.abcvps.cn/categories/bandwagon/" title="https://www.abcvps.cn/categories/bandwagon/">搬瓦工</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.abcvps.cn/categories/Vultr/" title="https://www.abcvps.cn/categories/Vultr/">Vultr</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.abcvps.cn/categories/discount" title="https://www.abcvps.cn/categories/discount">优惠</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           
@@ -1033,6 +1093,31 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'zvqRrWYVwpWRE5vcsqGCIK2E-gzGzoHsz',
+        appKey: 'lUs5Ad4MEqboA6YhNTNrK17C',
+        placeholder: '问题留言',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
 
 
 
